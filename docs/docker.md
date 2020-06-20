@@ -19,7 +19,7 @@ DRfC is installed only on the manager. (The first installed host.) Swarm workers
 ### Limitations
 
 * The Sagemaker container can only be run on the manager.
-* Docker images are downloaded from Docker Hub. Locally built images are allowed only if they have a unique tag, not in Docker Hub. If you have multiple Docker nodes ensure that they all have the image available.
+* Docker images are downloaded from Docker Hub. Locally built images are allowed only if they have a unique name. If you have multiple Docker nodes ensure that they all have the image available.
 
 ### Connecting Workers
 
