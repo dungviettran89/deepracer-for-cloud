@@ -72,11 +72,11 @@ echo "</body></html>" >> $FILE
 echo "}" >> $NGINX
 docker rm -f deepracer-$DR_RUN_ID-viewer
 docker run -d \
-  -p 8081:80 \
+  -p 8099:80 \
   --network sagemaker-local \
   --name deepracer-$DR_RUN_ID-viewer \
   -v $FILE/:/usr/share/nginx/html/index.html \
   -v $NGINX:/etc/nginx/conf.d/default.conf \
   nginx
 echo "Starting browser '$BROWSER'."
-$BROWSER "http://127.0.01:8081" &
+$BROWSER "http://127.0.01:8099" &
